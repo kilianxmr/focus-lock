@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusLock | Maximale Konzentration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F5F5F3;
+            --surface: #FFFFFF;
+            --text: #111110;
+            --accent: #B3F03A;
+            --border: #E6E6E1;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+        .logo {
+            background: var(--text);
+            color: white;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+        }
+        h1 { font-size: 28px; margin: 10px 0; font-weight: 600; }
+        p { color: #666; line-height: 1.6; margin-bottom: 30px; }
+        .feature-list {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        .feature-item::before {
+            content: "✓";
+            color: var(--accent);
+            background: var(--text);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .btn {
+            background: var(--accent);
+            color: var(--text);
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        footer {
+            margin-top: 40px;
+            font-size: 13px;
+        }
+        footer a {
+            color: #888;
+            text-decoration: none;
+        }
+        footer a:hover { text-underline-offset: 4px; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="logo">FL</div>
+        <h1>FocusLock</h1>
+        <p>Die Chrome Extension für tiefes Arbeiten und bewussten Internetkonsum.</p>
+        
+        <div class="feature-list">
+            <div class="feature-item">Intelligente Webseiten-Blockierung</div>
+            <div class="feature-item">Psychologische Friction-Sperren</div>
+            <div class="feature-item">Detaillierte Nutzungsstatistiken</div>
+            <div class="feature-item">Anpassbare Zeitkontingente</div>
+        </div>
+
+        <a href="#" class="btn">Im Web Store ansehen</a>
+    </div>
+
+    <footer>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+    </footer>
+
+</body>
+</html>
