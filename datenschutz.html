@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung | FocusLock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F5F5F3;
+            --surface: #FFFFFF;
+            --text: #111110;
+            --border: #E6E6E1;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            line-height: 1.6;
+        }
+        .container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+        h1 { font-size: 32px; margin-top: 0; margin-bottom: 24px; border-bottom: 2px solid var(--border); padding-bottom: 16px; }
+        h2 { font-size: 22px; margin-top: 40px; margin-bottom: 16px; }
+        p, ul { color: #444; margin-bottom: 16px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        strong { color: var(--text); }
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+        th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+        th { background-color: var(--bg); font-weight: 600; }
+        code { background: var(--bg); padding: 4px 8px; border-radius: 6px; font-family: monospace; font-size: 14px; color: #d32f2f; }
+        .back-link { display: inline-block; margin-bottom: 32px; color: var(--text); text-decoration: none; font-weight: 600; padding: 8px 16px; background: var(--bg); border-radius: 8px; transition: background 0.2s; }
+        .back-link:hover { background: var(--border); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+
+        <h1>Datenschutzerklärung für FocusLock</h1>
+        
+        <p>Der Schutz Ihrer Daten und Ihrer Privatsphäre hat bei FocusLock höchste Priorität. Diese Datenschutzerklärung erklärt transparent, welche Informationen bei der Nutzung der Browser-Erweiterung verarbeitet werden, wie sie gespeichert werden und warum wir spezifische Berechtigungen benötigen.</p>
+
+        <h2>1. Datenerhebung</h2>
+        <p>FocusLock erfasst Daten ausschließlich zu dem Zweck, die beworbene Kernfunktionalität (Blockierung von Webseiten und Zeiterfassung) bereitzustellen. Folgende Daten werden lokal während der Nutzung verarbeitet:</p>
+        <ul>
+            <li><strong>Besuchte URLs und Domains:</strong> Um zu prüfen, ob die aktuell aufgerufene Website auf Ihrer persönlichen Blockliste steht.</li>
+            <li><strong>Browsing-Verlauf und Nutzungsstatistiken:</strong> Die Erweiterung erfasst die verbrachte Zeit auf Domains, um Ihnen Statistiken über Ihr Surfverhalten und die Nutzung von "Pausen" (Snoozes) der letzten 30 Tage anzuzeigen.</li>
+            <li><strong>Persönliche Konfigurationen:</strong> Ihre individuell definierten Blockier-Regeln, Zeitlimits (Kontingente) und Einstellungen.</li>
+        </ul>
+        <p><strong>Wichtig:</strong> Es findet <strong>kein Tracking</strong> des gesamten Surfverhaltens über von Ihnen nicht besuchte Seiten hinweg zu Werbezwecken statt, und es werden keine persönlichen Identifikationsmerkmale (wie Name oder E-Mail) erhoben.</p>
+
+        <h2>2. Datenspeicherung – 100 % Lokal</h2>
+        <p>Ihre Privatsphäre ist durch unsere Architektur garantiert:</p>
+        <ul>
+            <li><strong>Ausschließliche lokale Speicherung:</strong> Alle erfassten Daten (inklusive Ihrer URLs, Einstellungen und Statistiken) werden <strong>ausschließlich lokal auf Ihrem Endgerät</strong> über die sichere Browser-Schnittstelle <code>chrome.storage.local</code> gespeichert.</li>
+            <li><strong>Keine externen Server:</strong> <strong>Es findet zu keinem Zeitpunkt eine Übertragung Ihrer Nutzerdaten oder Ihres Surfverhaltens an externe Server, Entwickler oder Dritte statt.</strong> FocusLock arbeitet völlig eigenständig und datenschutzfreundlich.</li>
+        </ul>
+
+        <h2>3. Notwendige Berechtigungen</h2>
+        <p>Um ordnungsgemäß zu funktionieren, erfordert FocusLock bestimmte Browser-Berechtigungen. Wir fordern nur das absolute Minimum an Berechtigungen an:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Berechtigung</th>
+                    <th>Technischer Zweck</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>tabs</code></td>
+                    <td>Notwendig, um die URL des aktiven Tabs auszulesen, damit das System abgleichen kann, ob die besuchte Seite den von Ihnen definierten Blockregeln entspricht.</td>
+                </tr>
+                <tr>
+                    <td><code>storage</code></td>
+                    <td>Essentiell, um Ihre Einstellungen, Ausnahmeregeln und lokalen Zeitstatistiken permanent auf Ihrer Festplatte (<code>chrome.storage.local</code>) zu speichern.</td>
+                </tr>
+                <tr>
+                    <td><code>scripting</code></td>
+                    <td>Wird benötigt, um das FocusLock-Sperr-Overlay und die dazugehörige Blockier-Logik direkt in die zu sperrenden Webseiten einzufügen.</td>
+                </tr>
+                <tr>
+                    <td><code>alarms</code></td>
+                    <td>Erforderlich für die Ausführung von Hintergrundprozessen im richtigen Takt, z. B. um regelmäßig die erfassten Browsing-Zeiten zu speichern.</td>
+                </tr>
+                <tr>
+                    <td><code>webNavigation</code></td>
+                    <td>Erlaubt es der Erweiterung, Navigationsereignisse (wie das Laden einer neuen Seite) sofort zu erkennen, um Injektionen optimal zu timen, besonders auf modernen "Single Page Applications" (SPA).</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;all_urls&gt;</code></td>
+                    <td><em>(Host-Berechtigung)</em> Zwingend erforderlich, damit die Erweiterung uneingeschränkt auf allen potenziellen Websites arbeiten kann, da Sie potenziell jede beliebige Domain blockieren können.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4. Drittanbieter & externe Verbindungen</h2>
+        <p>FocusLock ist grundsätzlich so konzipiert, dass externe Abhängigkeiten minimiert werden.</p>
+        <ul>
+            <li><strong>Keine Tracker, keine Analytics:</strong> Wir binden <strong>keine</strong> Drittanbieter-Analysetools (wie Google Analytics) oder Web-Tracker ein. Es wird kein separates Nutzerverhalten durch Dritte gemessen.</li>
+            <li><strong>Gestaltungsmittel (CDNs):</strong> Das sichtbare User-Interface der Erweiterung lädt standardisierte Web-Schriftarten (<em>Google Fonts: DM Sans</em>) und Icons (<em>Material Icons</em>) dynamisch von offiziellen Content Delivery Networks (CDNs), um die Darstellung einwandfrei abzubilden. Dabei sendet Ihr Browser systembedingt eine gewöhnliche Anfrage an diese Server.</li>
+        </ul>
+
+        <h2>5. Ihre Nutzerkontrolle</h2>
+        <p>Sie haben die volle und uneingeschränkte Kontrolle über Ihre Daten:</p>
+        <ul>
+            <li><strong>Daten-Export/Import:</strong> Sie können in den Einstellungen Ihre gesammelten lokalen Statistiken und Regeln manuell im JSON-Format exportieren und jederzeit wiederherstellen.</li>
+            <li><strong>Daten löschen durch Deinstallation:</strong> Da alle Daten ausschließlich lokal in den Speicherbereichen Ihres Browsers abgelegt sind, werden <strong>durch eine einfache Deinstallation von FocusLock sämtliche gesammelten Daten (Statistiken, Einstellungen und Regeln) restlos und unwiderruflich von Ihrem Gerät gelöscht</strong>. Es verbleiben keine Restdaten bei uns oder auf Servern im Internet.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
